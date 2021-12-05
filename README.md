@@ -16,3 +16,7 @@ compose version mydouyin
 2. exoplayer   
 3. okhttp   
 4. .......
+
+
+## 效果图  
+![效果图](https://github.com/shaopx/VideoClipEditViewTest/blob/master/screensnap1.png)
