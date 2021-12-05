@@ -19,4 +19,4 @@ compose version mydouyin
 
 
 ## 效果图  
-![效果图](https://github.com/shaopx/VideoClipEditViewTest/blob/master/screensnap1.png)
+![效果图](https://github.com/shaopx/ComposeDy/blob/master/art/screenshot_1.png)
