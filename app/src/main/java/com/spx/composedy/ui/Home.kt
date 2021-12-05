@@ -31,16 +31,15 @@ var TAG = "Home"
 fun Home() {
   var viewModel: ComposeDyViewModel = viewModel()
 
-  val context = LocalContext.current
-
-  Column(Modifier.fillMaxSize())  {
+  Column(Modifier.fillMaxSize()) {
     val pagerState = rememberPagerState(initialPage = 0)
     VerticalPager(
       count = 100,
+      state = pagerState,
+      itemSpacing = 16.dp,
       modifier = Modifier
         .weight(1f)
         .fillMaxHeight(),
-      pagerState
     ) { page ->
       val pageOffset = calculateCurrentOffsetForPage(page).absoluteValue
       Log.i(
@@ -59,27 +58,8 @@ fun Home() {
           .weight(1f)
           .fillMaxHeight()
       )
-
-//      pagerState.scrollToPage(0, 0f)
     }
 
     BottomBar()
-  }
-
-}
-
-@Composable
-fun HelloContent() {
-  Column(modifier = Modifier.padding(16.dp)) {
-    Text(
-      text = "Hello!",
-      modifier = Modifier.padding(bottom = 8.dp),
-      style = MaterialTheme.typography.h5
-    )
-    OutlinedTextField(
-      value = "",
-      onValueChange = { },
-      label = { Text("Name") }
-    )
   }
 }
